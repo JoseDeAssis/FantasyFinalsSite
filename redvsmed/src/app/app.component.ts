@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'redvsmed';
+  showCorrectWinner: boolean = false
+
+  showWinner() {
+    this.showCorrectWinner = true
+  }
 }
