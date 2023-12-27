@@ -1,17 +1,10 @@
-<div class="page" *ngIf="!showCorrectWinner; else resultadoVencedor">
+<div class="page">
   <app-header></app-header>
   <app-rosters></app-rosters>
   <app-survey-buttons (winnerPressed)="showWinner()"></app-survey-buttons>
 </div>
-<ng-template #resultadoVencedor>
-  <div class="result">
-    <div class="row">
-      <div class="column">
-        <h1>Excellent Choice, You Beautiful Genius!</h1>
-        <h2>
-          100% of people agree Josh's superior team will emerge victorious.
-        </h2>
-      </div>
-    </div>
-  </div>
-</ng-template>
+<app-results
+  [openResult]="showCorrectWinner"
+  *ngIf="showCorrectWinner"
+  @fadeIn
+></app-results>

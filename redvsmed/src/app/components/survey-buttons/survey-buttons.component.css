@@ -37,15 +37,13 @@
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.35);
 }
 .vote button#red {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  position: relative;
   background: #008aff;
   z-index: 1;
 }
 .vote button#med {
   background: #ff0e0e;
-  position: relative;
+  position: absolute;
   z-index: 2;
 }
 @media (min-width: 768px) {
